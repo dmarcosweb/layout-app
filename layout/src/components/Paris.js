@@ -33,24 +33,12 @@ const Paris = () => {
           />
           <View style={styles.container}>
             <Text style={styles.containerText}>
-              Paris, a capital da França, é conhecida por sua beleza romântica,
-              arquitetura clássica e rica herança cultural. Aqui está um resumo
-              dos principais pontos turísticos e atrações de Paris: Torre
-              Eiffel: O ícone mais famoso de Paris, uma torre de ferro
-              construída por Gustave Eiffel que oferece vistas panorâmicas
-              deslumbrantes da cidade.
-            </Text>
-            <Text style={styles.containerText}>
-              Museus Renomados: Museu do Louvre: Um dos maiores e mais
-              importantes museus do mundo, abrigando obras-primas como a Mona
-              Lisa e a Vênus de Milo. Museu d'Orsay: Concentra-se em arte
-              impressionista e pós-impressionista, com obras de artistas como
-              Monet, Van Gogh e Degas.
-            </Text>
-            <Text style={styles.containerText}>
-              Champs-Élysées e Arco do Triunfo: Avenida famosa por suas lojas de
-              luxo e cafés, culminando no imponente Arco do Triunfo, que
-              homenageia os soldados franceses.
+              Paris, the capital of France, is known for its romantic beauty,
+              classical architecture and rich cultural heritage. Here is a
+              summary of the main tourist attractions and attractions in Paris:
+              Tower Eiffel: Paris' most famous icon, an iron tower built by
+              Gustave Eiffel offering panoramic views stunning views of the
+              city. Renowned Museums: Louvre Museum.
             </Text>
           </View>
           <Pressable style={styles.back} onPress={() => setModal(!modal)}>
@@ -113,7 +101,7 @@ const styles = StyleSheet.create({
     color: '#222',
   },
   containerText: {
-    fontSize: 15,
+    fontSize: 25,
     color: '#222',
   },
 });

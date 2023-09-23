@@ -9,14 +9,14 @@ import {
   Modal,
 } from 'react-native';
 
-const Montreal = () => {
+const NewYork = () => {
   const [modal, setModal] = useState(false);
   return (
     <SafeAreaView>
       <Pressable onPress={() => setModal(true)}>
         <Image
           style={styles.mejores}
-          source={require('../assets/img/mejores1.jpg')}
+          source={require('../assets/img/new.png')}
         />
       </Pressable>
       {modal && (
@@ -26,18 +26,18 @@ const Montreal = () => {
           onRequestClose={() => {
             setModal(!modal);
           }}>
-          <Text style={styles.titleInfo}>Canada</Text>
+          <Text style={styles.titleInfo}>England</Text>
           <Image
             style={styles.info}
-            source={require('../assets/img/mejores1.jpg')}
+            source={require('../assets/img/new.png')}
           />
           <View style={styles.container}>
             <Text style={styles.containerText}>
-              Canada's second largest city, Montreal is located on an island in
-              the Saint Laurent River, in the French province of Quebec. The
-              city, where most of the residents are bilingual, mixes history and
-              culture and is like a little piece of Europe in North America.
-              entertainment options and cultural programs.
+              New York is on the northeast coast of America, about ten hours by
+              plane from São Paulo. There are direct flights from São Paulo with
+              the following airlines: American Airlines, United Airlines, Delta
+              Air... Read more at: The best way to get around New York, besides
+              walking within the neighborhoods, is by subway or taxi. 
             </Text>
           </View>
           <Pressable style={styles.back} onPress={() => setModal(!modal)}>
@@ -105,4 +105,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Montreal;
+export default NewYork;

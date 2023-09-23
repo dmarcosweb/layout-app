@@ -12,97 +12,144 @@ import {
 import Londres from './src/components/Londres';
 import Paris from './src/components/Paris';
 import Montreal from './src/components/Montreal';
+import NewYork from './src/components/NewYork';
+import Escotland from './src/components/Escotland';
+import Hotels from './src/components/Hotels';
+import Indicator from './src/components/Indicator';
+import HotelsTwo from './src/components/HotelsTwo';
 
 function App() {
+  const [start, setStart] = useState(true);
+
+  const startApp = () => {
+    let init = setTimeout(() => {
+      setStart(false);
+    }, 2900);
+  };
+
   return (
-    <>
-      <ScrollView>
-        <View>
-          <Image
-            style={styles.banner}
-            source={require('./src/assets/img/bg.jpg')}
-          />
+    <SafeAreaView>
+      {startApp()}
+
+      {start && (
+        <View style={styles.indicator}>
+          <Indicator />
         </View>
-        <View sstyle={styles.contenedor}>
-          <Text style={styles.titulo}>Tourist attractions</Text>
-          <ScrollView horizontal>
-            <View>
-              <Image
-                style={styles.cuidad}
-                source={require('./src/assets/img/actividad1.jpg')}
-              />
+      )}
+
+      {!start && (
+        <ScrollView>
+          {startApp()}
+          {start && (
+            <View style={styles.indicator}>
+              <Indicator />
             </View>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                style={styles.cuidad}
-                source={require('./src/assets/img/actividad2.jpg')}
-              />
-            </View>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                style={styles.cuidad}
-                source={require('./src/assets/img/actividad3.jpg')}
-              />
-            </View>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                style={styles.cuidad}
-                source={require('./src/assets/img/actividad4.jpg')}
-              />
-            </View>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                style={styles.cuidad}
-                source={require('./src/assets/img/actividad5.jpg')}
-              />
-            </View>
-          </ScrollView>
-          <Text style={styles.titulo}>Top Places</Text>
+          )}
           <View>
-            <View>
-              <Montreal />
-            </View>
-            <View>
-              <Londres />
-            </View>
-            <View>
-              <Paris />
-            </View>
+            <Image
+              resizeMode="cover"
+              style={styles.banner} 
+              source={require('./src/assets/img/banner.png')}
+            />
           </View>
-          <Text style={styles.titulo}>Comfortable lodging</Text>
-          <View style={styles.listado}>
-            <View style={styles.listadoItem}>
-              <Image
-                style={styles.mejores}
-                source={require('./src/assets/img/hospedaje1.jpg')}
-              />
+          <View style={styles.contenedor}>
+            <Text style={styles.titulo}>Tourist attractions</Text>
+            <ScrollView horizontal>
+              <View>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/museu.png')}
+                />
+              </View>
+              <View>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/fut.png')}
+                />
+              </View>
+              <View>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/actividad1.jpg')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/actividad2.jpg')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/ny.png')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/actividad3.jpg')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/actividad4.jpg')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/actividad5.jpg')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/peixes.png')}
+                />
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={styles.cuidad}
+                  source={require('./src/assets/img/comida.png')}
+                />
+              </View>
+            </ScrollView>
+            <Text style={styles.titulo}>Top Places</Text>
+            <View>
+              <View>
+                <Montreal />
+              </View>
+              <View>
+                <Londres />
+              </View>
+              <View>
+                <Paris />
+              </View>
+              <View>
+                <NewYork />
+              </View>
+              <View>
+                <Escotland />
+              </View>
             </View>
-            <View style={styles.listadoItem}>
-              <Image
-                style={styles.mejores}
-                source={require('./src/assets/img/hospedaje2.jpg')}
-              />
-            </View>
-            <View style={styles.listadoItem}>
-              <Image
-                style={styles.mejores}
-                source={require('./src/assets/img/hospedaje3.jpg')}
-              />
-            </View>
-            <View style={styles.listadoItem}>
-              <Image
-                style={styles.mejores}
-                source={require('./src/assets/img/hospedaje4.jpg')}
-              />
-            </View>
+            <Hotels />
+            <HotelsTwo />
           </View>
-        </View>
-      </ScrollView>
-    </>
+        </ScrollView>
+      )}
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  indicator: {
+    marginTop: 380,
+  },
+  contenedor: {
+    backgroundColor: '#f8f7f9',
+  },
   banner: {
     height: 300,
     flex: 1,
@@ -111,7 +158,7 @@ const styles = StyleSheet.create({
   titulo: {
     fontWeight: 'bold',
     textAlign: 'center',
-    fontSize: 25,
+    fontSize: 30,
     marginVertical: 20,
     color: '#222',
   },
@@ -137,6 +184,7 @@ const styles = StyleSheet.create({
 
 export default App;
 /*
+
 
 
 */

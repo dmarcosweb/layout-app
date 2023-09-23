@@ -33,23 +33,12 @@ const Londres = () => {
           />
           <View style={styles.container}>
             <Text style={styles.containerText}>
-              Londres, a capital do Reino Unido, é uma das cidades mais icônicas
-              e vibrantes do mundo, repleta de história, cultura, arquitetura
-              impressionante e uma cena diversificada. Aqui está um resumo das
-              principais atrações e aspectos turísticos de Londres:
-            </Text>
-            <Text style={styles.containerText}>
-              Monumentos e Marco Históricos: - A Torre de Londres: Um castelo
-              histórico que abriga as Joias da Coroa e tem uma rica história
-              como prisão, palácio real e fortaleza. - Palácio de Buckingham: A
-              residência oficial da monarquia britânica, conhecida pelas Trocas
-              da Guarda e cerimônias reais. - Big Ben e Palácio de Westminster:
-              Ícones da cidade, onde o Parlamento Britânico se reúne.
-            </Text>
-            <Text style={styles.containerText}>
-              Museus e Cultura: - Museu Britânico: Um dos museus mais famosos do
-              mundo, abriga uma vasta coleção de artefatos e obras de arte de
-              diferentes culturas e épocas. - National Gallery:
+              London, the capital of the United Kingdom, is one of the most
+              iconic cities and vibrant cities of the world, full of history,
+              culture, architecture impressive and diverse scene. Monuments and
+              Historical Landmarks: - The Tower of London: A castle historic
+              building that houses the Crown Jewels and has a rich history as a
+              prison, royal palace and fortress.
             </Text>
           </View>
           <Pressable style={styles.back} onPress={() => setModal(!modal)}>
@@ -112,7 +101,7 @@ const styles = StyleSheet.create({
     color: '#222',
   },
   containerText: {
-    fontSize: 15,
+    fontSize: 25,
     color: '#222',
   },
 });

@@ -9,14 +9,14 @@ import {
   Modal,
 } from 'react-native';
 
-const Montreal = () => {
+const Escotland = () => {
   const [modal, setModal] = useState(false);
   return (
     <SafeAreaView>
       <Pressable onPress={() => setModal(true)}>
         <Image
           style={styles.mejores}
-          source={require('../assets/img/mejores1.jpg')}
+          source={require('../assets/img/escot.png')}
         />
       </Pressable>
       {modal && (
@@ -26,19 +26,25 @@ const Montreal = () => {
           onRequestClose={() => {
             setModal(!modal);
           }}>
-          <Text style={styles.titleInfo}>Canada</Text>
+          <Text style={styles.titleInfo}>England</Text>
           <Image
             style={styles.info}
-            source={require('../assets/img/mejores1.jpg')}
+            source={require('../assets/img/escot.png')}
           />
           <View style={styles.container}>
             <Text style={styles.containerText}>
-              Canada's second largest city, Montreal is located on an island in
-              the Saint Laurent River, in the French province of Quebec. The
-              city, where most of the residents are bilingual, mixes history and
-              culture and is like a little piece of Europe in North America.
-              entertainment options and cultural programs.
+              The South and Center of Great Britain were occupied by the Roman
+              Empire, a territory that was transformed into the Roman province
+              of Britannia and is currently equivalent to England and Wales. The
+              north, in turn, was inhabited by the Celtic tribe of Picts and
+              known as Caledonia. In the 6th century, the Scots (Celtic
+              invaders) invaded the region and established the kingdom of Dalry.
+              According to tradition, the Kingdom of Scotland was founded in the
+              year 843, when Kenneth I became king of the Picts and Scots
+              tribes. Scotland occupies the northern third of the island of Great
+              Britain and is bordered
             </Text>
+                      
           </View>
           <Pressable style={styles.back} onPress={() => setModal(!modal)}>
             <Text style={styles.backInfo}>Voltar</Text>
@@ -57,7 +63,7 @@ const styles = StyleSheet.create({
   titulo: {
     fontWeight: 'bold',
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 25,
     marginVertical: 0,
     color: '#222',
   },
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
     marginVertical: 0,
   },
   titleInfo: {
-    fontSize: 25,
+    fontSize: 30,
     textAlign: 'center',
     marginVertical: 15,
     color: '#222',
@@ -100,9 +106,9 @@ const styles = StyleSheet.create({
     color: '#222',
   },
   containerText: {
-    fontSize: 25,
+    fontSize: 20,
     color: '#222',
   },
 });
 
-export default Montreal;
+export default Escotland;
